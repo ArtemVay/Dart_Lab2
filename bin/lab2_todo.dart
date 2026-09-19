@@ -40,7 +40,7 @@ void printMenu() {
   print("exit   - выйти");
 }
 void addTodo(List<Todo> todos) {
-  stdout.write("Название задачи");
+  stdout.write("Название задачи: ");
   String? input = stdin.readLineSync();
 
   if (input == null || input.trim().isEmpty) {
@@ -48,8 +48,8 @@ void addTodo(List<Todo> todos) {
     return;
   }
 
-  int newId = todos.isEmpty ? 1 : todos.last.id + 1;
-  todos.add(Todo(id: newId, title: input.trim()));
+  //int newId = todos.isEmpty ? 1 : todos.last.id + 1;
+  todos.add(Todo(title: input.trim()));
   print("Задача добавлена");
 }
 
